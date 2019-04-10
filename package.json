@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "devDependencies": {
+    "sketch-plugin-helper": "*"
+  },
+  "scripts": {
+    "build": "sph build",
+    "fix": "sph lint --fix",
+    "lint": "sph lint",
+    "symlink": "sph symlink",
+    "unlink": "sph symlink --delete",
+    "version": "sph version",
+    "watch": "sph build --watch"
+  },
+  "sketch-plugin-helper": {
+    "pluginName": "Clean Document",
+    "pluginDescription": "A Sketch plugin to automagically organise and clean up your Sketch document",
+    "authorName": "Lim Yuan Qing",
+    "githubUserName": "yuanqing",
+    "githubRepositoryName": "sketch-clean-document",
+    "menu": [
+      {
+        "handler": "clean-layers/clean-layers",
+        "label": "Clean Layers"
+      },
+      "-",
+      {
+        "handler": "reset-settings",
+        "label": "Reset Settings"
+      }
+    ],
+    "defaultSettings": {
+      "deleteHiddenLayers": true,
+      "flattenNestedGroups": true,
+      "scope": "Current page",
+      "smartRenameLayers": true
+    }
+  }
+}

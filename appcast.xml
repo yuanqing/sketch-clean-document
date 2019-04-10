@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Clean Document</title>
+    <link>https://raw.githubusercontent.com/yuanqing/sketch-clean-document/master/appcast.xml</link>
+    <description>A Sketch plugin to automagically organise and clean up your Sketch document</description>
+    <language>en</language>
+    <item>
+      <title>v0.0.0</title>
+      <description>0.0.0</description>
+      <enclosure url="https://github.com/yuanqing/sketch-clean-document/archive/v0.0.0.zip" sparkle:version="0.0.0"/>
+    </item>
+  </channel>
+</rss>
