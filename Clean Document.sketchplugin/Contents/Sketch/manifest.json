@@ -3,7 +3,7 @@
   "description": "A Sketch plugin to automagically organise and clean up your Sketch document",
   "author": "Lim Yuan Qing",
   "homepage": "https://github.com/yuanqing/sketch-clean-document",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "identifier": "yuanqing.sketch-clean-document",
   "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-clean-document/master/appcast.xml",
   "bundleVersion": 1,
