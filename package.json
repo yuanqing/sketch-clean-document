@@ -21,19 +21,43 @@
     "githubRepositoryName": "sketch-clean-document",
     "menu": [
       {
-        "handler": "clean-layers/clean-layers",
-        "label": "Clean Layers"
+        "handler": "clean-document",
+        "label": "Clean Document"
       },
       "-",
       {
-        "handler": "reset-settings",
-        "label": "Reset Settings"
+        "handler": "clean-layers/clean-layers",
+        "label": "Clean Layers"
+      },
+      {
+        "handler": "delete-unused-styles-and-symbols/delete-unused-styles-and-symbols",
+        "label": "Delete Unused Styles and Symbols"
+      },
+      "-",
+      {
+        "Settings": [
+          {
+            "handler": "clean-layers/settings",
+            "label": "Settings for Clean Layers"
+          },
+          {
+            "handler": "delete-unused-styles-and-symbols/settings",
+            "label": "Settings for Delete Unused Styles and Symbols"
+          },
+          "-",
+          {
+            "handler": "reset-settings",
+            "label": "Reset Settings"
+          }
+        ]
       }
     ],
     "defaultSettings": {
       "deleteHiddenLayers": true,
+      "deleteUnusedLayerStyles": true,
+      "deleteUnusedSymbols": true,
+      "deleteUnusedTextStyles": true,
       "flattenNestedGroups": true,
-      "scope": "Current page",
       "smartRenameLayers": true
     }
   }

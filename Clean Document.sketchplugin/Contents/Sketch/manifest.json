@@ -10,10 +10,34 @@
   "disableCocoaScriptPreprocessor": true,
   "commands": [
     {
+      "name": "Clean Document",
+      "identifier": "yuanqing.sketch-clean-document.clean-document",
+      "script": "plugin.js",
+      "handler": "clean-document"
+    },
+    {
       "name": "Clean Layers",
       "identifier": "yuanqing.sketch-clean-document.clean-layers.clean-layers",
       "script": "plugin.js",
       "handler": "clean-layers/clean-layers"
+    },
+    {
+      "name": "Delete Unused Styles and Symbols",
+      "identifier": "yuanqing.sketch-clean-document.delete-unused-styles-and-symbols.delete-unused-styles-and-symbols",
+      "script": "plugin.js",
+      "handler": "delete-unused-styles-and-symbols/delete-unused-styles-and-symbols"
+    },
+    {
+      "name": "Settings for Clean Layers",
+      "identifier": "yuanqing.sketch-clean-document.clean-layers.settings",
+      "script": "plugin.js",
+      "handler": "clean-layers/settings"
+    },
+    {
+      "name": "Settings for Delete Unused Styles and Symbols",
+      "identifier": "yuanqing.sketch-clean-document.delete-unused-styles-and-symbols.settings",
+      "script": "plugin.js",
+      "handler": "delete-unused-styles-and-symbols/settings"
     },
     {
       "name": "Reset Settings",
@@ -25,9 +49,20 @@
   "menu": {
     "title": "Clean Document",
     "items": [
-      "yuanqing.sketch-clean-document.clean-layers.clean-layers",
+      "yuanqing.sketch-clean-document.clean-document",
       "-",
-      "yuanqing.sketch-clean-document.reset-settings"
+      "yuanqing.sketch-clean-document.clean-layers.clean-layers",
+      "yuanqing.sketch-clean-document.delete-unused-styles-and-symbols.delete-unused-styles-and-symbols",
+      "-",
+      {
+        "title": "Settings",
+        "items": [
+          "yuanqing.sketch-clean-document.clean-layers.settings",
+          "yuanqing.sketch-clean-document.delete-unused-styles-and-symbols.settings",
+          "-",
+          "yuanqing.sketch-clean-document.reset-settings"
+        ]
+      }
     ]
   }
 }
