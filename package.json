@@ -63,7 +63,7 @@
       "unnestNestedGroups": true,
       "smartRenameLayers": true,
       "smartSortLayers": true,
-      "whitelistRegularExpression": "^@"
+      "whitelistRegularExpression": ""
     }
   }
 }
