@@ -11,16 +11,15 @@ import unnestNestedGroup from './unnest-nested-group'
 import smartRenameLayer from './smart-rename-layer'
 import smartSortLayer from './smart-sort-layer'
 
-export default function cleanLayers ({ cleanDocument }) {
+export default function cleanLayers ({ isCleanDocument }) {
   const settings = getSettings()
-  const layers = cleanDocument
+  const layers = isCleanDocument
     ? getLayersOnAllPages()
     : getSelectedLayersOrLayersOnCurrentPage()
-  const whitelistRegularExpression = new RegExp(
-    settings.whitelistRegularExpression === '' ? '^.+$' : settings.whitelistRegularExpression
-  )
+  const whitelistRegularExpression =
+    settings.whitelistRegularExpression === '' ? null : new RegExp(settings.whitelistRegularExpression)
   iterateNestedLayers(layers, function (layer) {
-    if (whitelistRegularExpression.test(layer.name)) {
+    if (whitelistRegularExpression && whitelistRegularExpression.test(layer.name)) {
       return
     }
     if (settings.deleteHiddenLayers && deleteHiddenLayer(layer)) {
@@ -36,5 +35,7 @@ export default function cleanLayers ({ cleanDocument }) {
       unnestNestedGroup(layer)
     }
   })
-  showSuccessMessage('Layers cleaned')
+  if (!isCleanDocument) {
+    showSuccessMessage('Layers cleaned')
+  }
 }

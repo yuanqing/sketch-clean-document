@@ -10,7 +10,7 @@ import {
 } from './delete-unused-styles'
 import deleteUnusedSymbols from './delete-unused-symbols'
 
-export default function deleteUnusedStylesAndSymbols () {
+export default function deleteUnusedStylesAndSymbols ({ isCleanDocument }) {
   const settings = getSettings()
   let deletedStylesCount = 0
   if (settings.deleteUnusedLayerStyles) {
@@ -35,6 +35,9 @@ export default function deleteUnusedStylesAndSymbols () {
     type: 'symbol',
     count: deletedSymbolsCount
   })
+  if (isCleanDocument) {
+    return
+  }
   if (deletedStylesCount !== 0 && deletedSymbolsCount !== 0) {
     showSuccessMessage(
       `Deleted ${deletedStylesMessage} and ${deletedSymbolMessage}`

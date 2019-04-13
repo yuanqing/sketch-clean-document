@@ -4,7 +4,7 @@ import cleanLayers from './clean-layers/clean-layers'
 import deleteUnusedStylesAndSymbols from './delete-unused-styles-and-symbols/delete-unused-styles-and-symbols'
 
 export default function cleanDocument () {
-  cleanLayers({ cleanDocument: true })
-  deleteUnusedStylesAndSymbols()
+  cleanLayers({ isCleanDocument: true })
+  deleteUnusedStylesAndSymbols({ isCleanDocument: true })
   showSuccessMessage('Document cleaned')
 }
