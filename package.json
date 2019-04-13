@@ -1,6 +1,15 @@
 {
-  "private": true,
+  "name": "sketch-clean-document",
   "version": "0.0.1",
+  "description": "A Sketch plugin to automagically organise and clean up your Sketch document",
+  "keywords": [
+    "plugin",
+    "sketch",
+    "sketch-plugin-helper"
+  ],
+  "license": "MIT",
+  "author": "Lim Yuan Qing",
+  "repository": "yuanqing/sketch-clean-document",
   "dependencies": {
     "sketch-sort-layer-list": "*"
   },
@@ -17,11 +26,7 @@
     "watch": "sph build --watch"
   },
   "sketch-plugin-helper": {
-    "pluginName": "Clean Document",
-    "pluginDescription": "A Sketch plugin to automagically organise and clean up your Sketch document",
-    "authorName": "Lim Yuan Qing",
-    "githubUserName": "yuanqing",
-    "githubRepositoryName": "sketch-clean-document",
+    "name": "Clean Document",
     "menu": [
       {
         "handler": "clean-document",
