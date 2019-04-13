@@ -1,6 +1,6 @@
 import {
-  getSelectedLayersOrLayersOnCurrentPage,
   getLayersOnAllPages,
+  getSelectedLayersOrLayersOnCurrentPage,
   getSettings,
   iterateNestedLayers,
   showSuccessMessage
@@ -16,7 +16,13 @@ export default function cleanLayers ({ cleanDocument }) {
   const layers = cleanDocument
     ? getLayersOnAllPages()
     : getSelectedLayersOrLayersOnCurrentPage()
+  const whitelistRegularExpression = new RegExp(
+    settings.whitelistRegularExpression === '' ? '^.+$' : settings.whitelistRegularExpression
+  )
   iterateNestedLayers(layers, function (layer) {
+    if (whitelistRegularExpression.test(layer.name)) {
+      return
+    }
     if (settings.deleteHiddenLayers && deleteHiddenLayer(layer)) {
       return
     }

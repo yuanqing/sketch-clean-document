@@ -1,7 +1,8 @@
 import {
   openSettingsDialog,
   saveSettings,
-  CHECK_BOX
+  CHECK_BOX,
+  TEXT_BOX
 } from 'sketch-plugin-helper'
 
 const settingsConfig = {
@@ -26,6 +27,11 @@ const settingsConfig = {
       type: CHECK_BOX,
       key: 'deleteHiddenLayers',
       label: 'Delete hidden layers'
+    },
+    {
+      type: TEXT_BOX,
+      key: 'whitelistRegularExpression',
+      label: 'Whitelist regular expression'
     }
   ]
 }

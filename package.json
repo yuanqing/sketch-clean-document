@@ -62,7 +62,8 @@
       "deleteUnusedTextStyles": true,
       "unnestNestedGroups": true,
       "smartRenameLayers": true,
-      "smartSortLayers": true
+      "smartSortLayers": true,
+      "whitelistRegularExpression": "^@"
     }
   }
 }
