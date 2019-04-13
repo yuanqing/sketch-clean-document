@@ -1,6 +1,6 @@
 import { adjustParentGroupsToFit } from 'sketch-plugin-helper'
 
-export default function flattenNestedGroup (layer) {
+export default function unnestNestedGroup (layer) {
   if (layer.type !== 'Group') {
     return
   }
@@ -19,10 +19,10 @@ export default function flattenNestedGroup (layer) {
     childLayers[0].selected = false
     layer.remove()
     adjustParentGroupsToFit(layer)
-    flattenNestedGroup(childLayers[0])
+    unnestNestedGroup(childLayers[0])
     return
   }
   childLayers.forEach(function (childLayer) {
-    flattenNestedGroup(childLayer)
+    unnestNestedGroup(childLayer)
   })
 }

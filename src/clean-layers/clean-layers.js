@@ -7,8 +7,9 @@ import {
 } from 'sketch-plugin-helper'
 
 import deleteHiddenLayer from './delete-hidden-layer'
-import flattenNestedGroup from './flatten-nested-group'
+import unnestNestedGroup from './unnest-nested-group'
 import smartRenameLayer from './smart-rename-layer'
+import smartSortLayer from './smart-sort-layer'
 
 export default function cleanLayers ({ cleanDocument }) {
   const settings = getSettings()
@@ -22,8 +23,11 @@ export default function cleanLayers ({ cleanDocument }) {
     if (settings.smartRenameLayers) {
       smartRenameLayer(layer)
     }
-    if (settings.flattenNestedGroups) {
-      flattenNestedGroup(layer)
+    if (settings.smartSortLayers) {
+      smartSortLayer(layer)
+    }
+    if (settings.unnestNestedGroups) {
+      unnestNestedGroup(layer)
     }
   })
   showSuccessMessage('Layers cleaned')

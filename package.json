@@ -1,6 +1,9 @@
 {
   "private": true,
   "version": "0.0.1",
+  "dependencies": {
+    "sketch-sort-layer-list": "*"
+  },
   "devDependencies": {
     "sketch-plugin-helper": "*"
   },
@@ -57,8 +60,9 @@
       "deleteUnusedLayerStyles": true,
       "deleteUnusedSymbols": true,
       "deleteUnusedTextStyles": true,
-      "flattenNestedGroups": true,
-      "smartRenameLayers": true
+      "unnestNestedGroups": true,
+      "smartRenameLayers": true,
+      "smartSortLayers": true
     }
   }
 }

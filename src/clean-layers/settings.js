@@ -14,8 +14,13 @@ const settingsConfig = {
     },
     {
       type: CHECK_BOX,
-      key: 'flattenNestedGroups',
-      label: 'Flatten nested groups'
+      key: 'smartSortLayers',
+      label: 'Smart sort layers'
+    },
+    {
+      type: CHECK_BOX,
+      key: 'unnestNestedGroups',
+      label: 'Unnest nested groups'
     },
     {
       type: CHECK_BOX,
