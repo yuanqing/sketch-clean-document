@@ -12,6 +12,21 @@ export default function unnestNestedGroup (layer) {
     return
   }
   if (length === 1) {
+    const style = layer.style
+    const transform = layer.transform
+    if (
+      transform.rotation !== 0 ||
+      transform.flippedHorizontally ||
+      transform.flippedVertically ||
+      layer.exportFormats.length !== 0 ||
+      layer.flow ||
+      layer.hidden ||
+      layer.locked ||
+      style.opacity !== 1 ||
+      style.shadows.length !== 0
+    ) {
+      return
+    }
     childLayers[0].sketchObject.moveToLayer_beforeLayer(
       layer.parent.sketchObject,
       layer.sketchObject
