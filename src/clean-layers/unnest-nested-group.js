@@ -12,16 +12,16 @@ export default function unnestNestedGroup (layer) {
     return
   }
   if (length === 1) {
-    const style = layer.style
     const transform = layer.transform
+    const style = layer.style
     if (
+      layer.hidden ||
+      layer.locked ||
+      layer.exportFormats.length !== 0 ||
+      layer.flow ||
       transform.rotation !== 0 ||
       transform.flippedHorizontally ||
       transform.flippedVertically ||
-      layer.exportFormats.length !== 0 ||
-      layer.flow ||
-      layer.hidden ||
-      layer.locked ||
       style.opacity !== 1 ||
       style.shadows.length !== 0
     ) {
@@ -31,6 +31,7 @@ export default function unnestNestedGroup (layer) {
       layer.parent.sketchObject,
       layer.sketchObject
     )
+    layer.selected = false
     childLayers[0].selected = false
     layer.remove()
     adjustParentGroupsToFit(layer)
