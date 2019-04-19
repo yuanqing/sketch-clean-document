@@ -6,12 +6,11 @@
 
 ### Clean Layers
 
-- Deletes hidden layers
+- Delete hidden layers
 - Smart rename layers
-  - Ignores artboards and layers with exports
 - Unnest nested groups
+- Skip processing of certain layers using a whitelist regular expression
 - Operates on layers in the selection, or on layers on the current page if the selection is empty
-- Set a whitelist regular expression to skip processing of certain layers
 
 ### Delete Unused Styles and Symbols
 
