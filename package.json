@@ -65,9 +65,9 @@
       "deleteUnusedLayerStyles": true,
       "deleteUnusedSymbols": true,
       "deleteUnusedTextStyles": true,
-      "unnestNestedGroups": true,
       "smartRenameLayers": true,
       "smartSortLayers": true,
+      "unnestNestedGroups": true,
       "whitelistRegularExpression": ""
     }
   }
