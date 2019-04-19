@@ -17,9 +17,14 @@ export default function cleanLayers ({ isCleanDocument }) {
     ? getLayersOnAllPages()
     : getSelectedLayersOrLayersOnCurrentPage()
   const whitelistRegularExpression =
-    settings.whitelistRegularExpression === '' ? null : new RegExp(settings.whitelistRegularExpression)
+    settings.whitelistRegularExpression === ''
+      ? null
+      : new RegExp(settings.whitelistRegularExpression)
   iterateNestedLayers(layers, function (layer) {
-    if (whitelistRegularExpression && whitelistRegularExpression.test(layer.name)) {
+    if (
+      whitelistRegularExpression &&
+      whitelistRegularExpression.test(layer.name)
+    ) {
       return
     }
     if (settings.deleteHiddenLayers && deleteHiddenLayer(layer)) {
