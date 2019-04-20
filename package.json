@@ -38,8 +38,8 @@
         "label": "Clean Layers"
       },
       {
-        "handler": "delete-unused-styles-and-symbols/delete-unused-styles-and-symbols",
-        "label": "Delete Unused Styles and Symbols"
+        "handler": "clean-styles-and-symbols/clean-styles-and-symbols",
+        "label": "Clean Styles and Symbols"
       },
       "-",
       {
@@ -49,8 +49,8 @@
             "label": "Settings for Clean Layers"
           },
           {
-            "handler": "delete-unused-styles-and-symbols/settings",
-            "label": "Settings for Delete Unused Styles and Symbols"
+            "handler": "clean-styles-and-symbols/settings",
+            "label": "Settings for Clean Styles and Symbols"
           },
           "-",
           {
@@ -61,14 +61,14 @@
       }
     ],
     "defaultSettings": {
-      "deleteHiddenLayers": true,
-      "deleteUnusedLayerStyles": true,
-      "deleteUnusedSymbols": true,
-      "deleteUnusedTextStyles": true,
-      "smartRenameLayers": true,
-      "smartSortLayers": true,
-      "unnestNestedGroups": true,
-      "whitelistRegularExpression": ""
+      "cleanLayers.deleteHiddenLayers": true,
+      "cleanLayers.smartRenameLayers": true,
+      "cleanLayers.smartSortLayers": true,
+      "cleanLayers.unnestNestedGroups": true,
+      "cleanLayers.whitelistRegularExpression": "",
+      "cleanStylesAndSymbols.deleteUnusedLayerStyles": true,
+      "cleanStylesAndSymbols.deleteUnusedSymbols": true,
+      "cleanStylesAndSymbols.deleteUnusedTextStyles": true
     }
   }
 }

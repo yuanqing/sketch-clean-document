@@ -16,10 +16,9 @@ export default function cleanLayers ({ isCleanDocument }) {
   const layers = isCleanDocument
     ? getLayersOnAllPages()
     : getSelectedLayersOrLayersOnCurrentPage()
+  const regularExpression = settings['cleanLayers.whitelistRegularExpression']
   const whitelistRegularExpression =
-    settings.whitelistRegularExpression === ''
-      ? null
-      : new RegExp(settings.whitelistRegularExpression)
+    regularExpression === '' ? null : new RegExp(regularExpression)
   iterateNestedLayers(layers, function (layer) {
     if (
       whitelistRegularExpression &&
@@ -27,16 +26,19 @@ export default function cleanLayers ({ isCleanDocument }) {
     ) {
       return
     }
-    if (settings.deleteHiddenLayers && deleteHiddenLayer(layer)) {
+    if (
+      settings['cleanLayers.deleteHiddenLayers'] &&
+      deleteHiddenLayer(layer)
+    ) {
       return
     }
-    if (settings.smartRenameLayers) {
+    if (settings['cleanLayers.smartRenameLayers']) {
       smartRenameLayer(layer)
     }
-    if (settings.smartSortLayers) {
+    if (settings['cleanLayers.smartSortLayers']) {
       smartSortLayer(layer)
     }
-    if (settings.unnestNestedGroups) {
+    if (settings['cleanLayers.unnestNestedGroups']) {
       unnestNestedGroup(layer)
     }
   })

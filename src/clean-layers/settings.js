@@ -10,27 +10,27 @@ const settingsConfig = {
   inputs: [
     {
       type: CHECK_BOX,
-      key: 'smartRenameLayers',
-      label: 'Smart rename layers'
+      key: 'cleanLayers.deleteHiddenLayers',
+      label: 'Delete hidden layers'
     },
     {
       type: CHECK_BOX,
-      key: 'smartSortLayers',
-      label: 'Smart sort layers'
-    },
-    {
-      type: CHECK_BOX,
-      key: 'unnestNestedGroups',
+      key: 'cleanLayers.unnestNestedGroups',
       label: 'Unnest nested groups'
     },
     {
       type: CHECK_BOX,
-      key: 'deleteHiddenLayers',
-      label: 'Delete hidden layers'
+      key: 'cleanLayers.smartRenameLayers',
+      label: 'Smart rename layers'
+    },
+    {
+      type: CHECK_BOX,
+      key: 'cleanLayers.smartSortLayers',
+      label: 'Smart sort layers'
     },
     {
       type: TEXT_BOX,
-      key: 'whitelistRegularExpression',
+      key: 'cleanLayers.whitelistRegularExpression',
       label: 'Whitelist regular expression'
     }
   ]

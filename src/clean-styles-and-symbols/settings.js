@@ -9,17 +9,17 @@ const settingsConfig = {
   inputs: [
     {
       type: CHECK_BOX,
-      key: 'deleteUnusedTextStyles',
+      key: 'cleanStylesAndSymbols.deleteUnusedTextStyles',
       label: 'Delete unused text styles'
     },
     {
       type: CHECK_BOX,
-      key: 'deleteUnusedLayerStyles',
+      key: 'cleanStylesAndSymbols.deleteUnusedLayerStyles',
       label: 'Delete unused layer styles'
     },
     {
       type: CHECK_BOX,
-      key: 'deleteUnusedSymbols',
+      key: 'cleanStylesAndSymbols.deleteUnusedSymbols',
       label: 'Delete unused symbols'
     }
   ]

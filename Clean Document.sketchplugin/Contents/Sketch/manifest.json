@@ -22,10 +22,10 @@
       "handler": "clean-layers/clean-layers"
     },
     {
-      "name": "Delete Unused Styles and Symbols",
-      "identifier": "yuanqing.sketch-clean-document.delete-unused-styles-and-symbols.delete-unused-styles-and-symbols",
+      "name": "Clean Styles and Symbols",
+      "identifier": "yuanqing.sketch-clean-document.clean-styles-and-symbols.clean-styles-and-symbols",
       "script": "plugin.js",
-      "handler": "delete-unused-styles-and-symbols/delete-unused-styles-and-symbols"
+      "handler": "clean-styles-and-symbols/clean-styles-and-symbols"
     },
     {
       "name": "Settings for Clean Layers",
@@ -34,10 +34,10 @@
       "handler": "clean-layers/settings"
     },
     {
-      "name": "Settings for Delete Unused Styles and Symbols",
-      "identifier": "yuanqing.sketch-clean-document.delete-unused-styles-and-symbols.settings",
+      "name": "Settings for Clean Styles and Symbols",
+      "identifier": "yuanqing.sketch-clean-document.clean-styles-and-symbols.settings",
       "script": "plugin.js",
-      "handler": "delete-unused-styles-and-symbols/settings"
+      "handler": "clean-styles-and-symbols/settings"
     },
     {
       "name": "Reset Settings",
@@ -52,13 +52,13 @@
       "yuanqing.sketch-clean-document.clean-document",
       "-",
       "yuanqing.sketch-clean-document.clean-layers.clean-layers",
-      "yuanqing.sketch-clean-document.delete-unused-styles-and-symbols.delete-unused-styles-and-symbols",
+      "yuanqing.sketch-clean-document.clean-styles-and-symbols.clean-styles-and-symbols",
       "-",
       {
         "title": "Settings",
         "items": [
           "yuanqing.sketch-clean-document.clean-layers.settings",
-          "yuanqing.sketch-clean-document.delete-unused-styles-and-symbols.settings",
+          "yuanqing.sketch-clean-document.clean-styles-and-symbols.settings",
           "-",
           "yuanqing.sketch-clean-document.reset-settings"
         ]
