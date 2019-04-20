@@ -1,12 +1,17 @@
 import naturalCompare from 'natural-compare-lite'
 import { Page } from 'sketch/dom'
+import { fromNative } from 'sketch'
 import { getSymbolsPage, getAllPages } from 'sketch-plugin-helper'
 import { sortByName } from 'sketch-sort-layer-list/src/attributes/name'
 import updateLayerList from 'sketch-sort-layer-list/src/update-layer-list'
 
 export default function organiseSymbols ({ groupDefinition, space }) {
-  const symbols = getAllSymbolMasters()
+  const symbols = getAllSymbols()
+  if (symbols.length === 0) {
+    return
+  }
   const symbolsPage = getSymbolsPage() || Page.createSymbolsPage()
+  symbolsPage.sketchObject.setRulerBase(CGPointMake(0, 0))
   symbolsPage.name = 'Symbols'
   moveToSymbolsPage({ symbols, symbolsPage })
   const symbolGroups = createSymbolGroups({ symbols, groupDefinition })
@@ -14,7 +19,7 @@ export default function organiseSymbols ({ groupDefinition, space }) {
   sortLayerList(symbolGroups)
 }
 
-function getAllSymbolMasters () {
+function getAllSymbols () {
   const result = []
   getAllPages().forEach(function (page) {
     page.layers.forEach(function (layer) {
@@ -52,7 +57,7 @@ function createSymbolGroups ({ symbols, groupDefinition }) {
   })
   return Object.values(groups)
     .sort(function (a, b) {
-      return naturalCompare(a.groupName, b.groupName)
+      return naturalCompare(a.groupName.toLowerCase(), b.groupName.toLowerCase())
     })
     .map(function ({ layers }) {
       return sortByName(layers)
@@ -67,7 +72,6 @@ function arrangeSymbolGroups ({ symbolGroups, space }) {
     symbolGroup.forEach(function (layer) {
       layer.frame.x = x
       layer.frame.y = y
-      console.log(layer.frame)
       y += layer.frame.height + space
       if (layer.frame.width > maxWidth) {
         maxWidth = layer.frame.width

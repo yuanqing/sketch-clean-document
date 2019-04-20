@@ -51,7 +51,7 @@ function sortPages () {
     if (pageA.name === pageB.name) {
       return naturalCompare(pageA.id, pageB.id)
     }
-    return naturalCompare(pageA.name, pageB.name)
+    return naturalCompare(pageA.name.toLowerCase(), pageB.name.toLowerCase())
   })
   document.performPageSwitchUpdates()
 }
