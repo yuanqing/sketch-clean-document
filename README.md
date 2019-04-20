@@ -14,12 +14,12 @@
 
 ### Clean Symbols
 
-- Deletes unused symbol masters from the current document
+- Deletes unused symbol masters
 - Organises the Symbol page
 
 ### Clean Styles
 
-- Deletes unused text styles and layer styles from the current document
+- Deletes unused text styles and layer styles
 
 ### Clean Pages
 
@@ -28,7 +28,7 @@
 
 ### Clean Document
 
-Executes the above four commands on all layers, symbols, text styles, layer styles and pages in the current document
+Executes the above four commands on all layers (on all pages), symbols, text styles, layer styles and pages in the current document
 
 ## Installation
 
