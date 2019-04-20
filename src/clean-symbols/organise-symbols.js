@@ -1,6 +1,5 @@
 import naturalCompare from 'natural-compare-lite'
 import { Page } from 'sketch/dom'
-import { fromNative } from 'sketch'
 import { getSymbolsPage, getAllPages } from 'sketch-plugin-helper'
 import { sortByName } from 'sketch-sort-layer-list/src/attributes/name'
 import updateLayerList from 'sketch-sort-layer-list/src/update-layer-list'
