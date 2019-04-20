@@ -57,7 +57,10 @@ function createSymbolGroups ({ symbols, groupDefinition }) {
   })
   return Object.values(groups)
     .sort(function (a, b) {
-      return naturalCompare(a.groupName.toLowerCase(), b.groupName.toLowerCase())
+      return naturalCompare(
+        a.groupName.toLowerCase(),
+        b.groupName.toLowerCase()
+      )
     })
     .map(function ({ layers }) {
       return sortByName(layers)
