@@ -6,17 +6,21 @@ import {
   showSuccessMessage
 } from 'sketch-plugin-helper'
 
+import checkSettings from '../settings/check-settings'
 import deleteHiddenLayer from './delete-hidden-layer'
 import unnestNestedGroup from './unnest-nested-group'
 import smartRenameLayer from './smart-rename-layer'
 import smartSortLayer from './smart-sort-layer'
 
 export default function cleanLayers ({ isCleanDocument }) {
-  const settings = getSettings()
+  const settings = getSettings({ keyPrefix: 'cleanLayers' })
+  if (!checkSettings(settings)) {
+    return
+  }
   const layers = isCleanDocument
     ? getLayersOnAllPages()
     : getSelectedLayersOrLayersOnCurrentPage()
-  const regularExpression = settings['cleanLayers.whitelistRegularExpression']
+  const regularExpression = settings.whitelistRegularExpression
   const whitelistRegularExpression =
     regularExpression === '' ? null : new RegExp(regularExpression)
   iterateNestedLayers(layers, function (layer) {
@@ -26,19 +30,16 @@ export default function cleanLayers ({ isCleanDocument }) {
     ) {
       return
     }
-    if (
-      settings['cleanLayers.deleteHiddenLayers'] &&
-      deleteHiddenLayer(layer)
-    ) {
+    if (settings.deleteHiddenLayers && deleteHiddenLayer(layer)) {
       return
     }
-    if (settings['cleanLayers.smartRenameLayers']) {
+    if (settings.smartRenameLayers) {
       smartRenameLayer(layer)
     }
-    if (settings['cleanLayers.smartSortLayers']) {
+    if (settings.smartSortLayers) {
       smartSortLayer(layer)
     }
-    if (settings['cleanLayers.unnestNestedGroups']) {
+    if (settings.unnestNestedGroups) {
       unnestNestedGroup(layer)
     }
   })

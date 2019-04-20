@@ -9,16 +9,26 @@
 - Delete hidden layers
 - Smart rename layers
 - Unnest nested groups
-- Skip processing of certain layers using a whitelist regular expression
+- Specify a whitelist regular expression to skip processing of certain layers
 - Operates on layers in the selection, or on layers on the current page if the selection is empty
 
-### Delete Unused Styles and Symbols
+### Clean Symbols
 
-Deletes all unused text styles, layer styles and symbols from the current document
+- Deletes unused symbol masters from the current document
+- Organises the Symbol page
+
+### Clean Styles
+
+- Deletes unused text styles and layer styles from the current document
+
+### Clean Pages
+
+- Deletes empty pages
+- Sorts the pages in alphabetical order
 
 ### Clean Document
 
-Executes the above two commands on all layers, text styles, layer styles and symbols in the current document
+Executes the above four commands on all layers, symbols, text styles, layer styles and pages in the current document
 
 ## Installation
 

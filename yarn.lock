@@ -3009,6 +3009,11 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+natural-compare-lite@1.4.0, natural-compare-lite@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/natural-compare-lite/-/natural-compare-lite-1.4.0.tgz#17b09581988979fddafe0201e931ba933c96cbb4"
+  integrity sha1-F7CVgZiJef3a/gIB6TG6kzyWy7Q=
+
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
@@ -4040,6 +4045,13 @@ sketch-plugin-helper@*:
     webpack "^4.29.6"
     xml-js "^1.6.11"
     yargs "^13.2.2"
+
+sketch-sort-layer-list@*:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/sketch-sort-layer-list/-/sketch-sort-layer-list-0.2.3.tgz#db7dfcbb37e18e3c0cbe27c3e44469a6dd88ae9c"
+  integrity sha512-G/j/MDtKvkv5P9+CHA+01f1aQGcmjJ1WaslCZk7W4+QDBQdDRv8DKF6117KfCe/vr+ljUu620cnkRYWgHLSZBw==
+  dependencies:
+    natural-compare-lite "1.4.0"
 
 slash@^2.0.0:
   version "2.0.0"

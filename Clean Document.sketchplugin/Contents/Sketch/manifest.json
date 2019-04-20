@@ -22,28 +22,34 @@
       "handler": "clean-layers/clean-layers"
     },
     {
-      "name": "Clean Styles and Symbols",
-      "identifier": "yuanqing.sketch-clean-document.clean-styles-and-symbols.clean-styles-and-symbols",
+      "name": "Clean Symbols",
+      "identifier": "yuanqing.sketch-clean-document.clean-symbols.clean-symbols",
       "script": "plugin.js",
-      "handler": "clean-styles-and-symbols/clean-styles-and-symbols"
+      "handler": "clean-symbols/clean-symbols"
     },
     {
-      "name": "Settings for Clean Layers",
-      "identifier": "yuanqing.sketch-clean-document.clean-layers.settings",
+      "name": "Clean Styles",
+      "identifier": "yuanqing.sketch-clean-document.clean-styles.clean-styles",
       "script": "plugin.js",
-      "handler": "clean-layers/settings"
+      "handler": "clean-styles/clean-styles"
     },
     {
-      "name": "Settings for Clean Styles and Symbols",
-      "identifier": "yuanqing.sketch-clean-document.clean-styles-and-symbols.settings",
+      "name": "Clean Pages",
+      "identifier": "yuanqing.sketch-clean-document.clean-pages.clean-pages",
       "script": "plugin.js",
-      "handler": "clean-styles-and-symbols/settings"
+      "handler": "clean-pages/clean-pages"
+    },
+    {
+      "name": "Settings",
+      "identifier": "yuanqing.sketch-clean-document.settings.settings",
+      "script": "plugin.js",
+      "handler": "settings/settings"
     },
     {
       "name": "Reset Settings",
-      "identifier": "yuanqing.sketch-clean-document.reset-settings",
+      "identifier": "yuanqing.sketch-clean-document.settings.reset-settings",
       "script": "plugin.js",
-      "handler": "reset-settings"
+      "handler": "settings/reset-settings"
     }
   ],
   "menu": {
@@ -52,15 +58,16 @@
       "yuanqing.sketch-clean-document.clean-document",
       "-",
       "yuanqing.sketch-clean-document.clean-layers.clean-layers",
-      "yuanqing.sketch-clean-document.clean-styles-and-symbols.clean-styles-and-symbols",
+      "yuanqing.sketch-clean-document.clean-symbols.clean-symbols",
+      "yuanqing.sketch-clean-document.clean-styles.clean-styles",
+      "yuanqing.sketch-clean-document.clean-pages.clean-pages",
       "-",
       {
         "title": "Settings",
         "items": [
-          "yuanqing.sketch-clean-document.clean-layers.settings",
-          "yuanqing.sketch-clean-document.clean-styles-and-symbols.settings",
+          "yuanqing.sketch-clean-document.settings.settings",
           "-",
-          "yuanqing.sketch-clean-document.reset-settings"
+          "yuanqing.sketch-clean-document.settings.reset-settings"
         ]
       }
     ]

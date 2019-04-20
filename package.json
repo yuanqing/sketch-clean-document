@@ -11,6 +11,7 @@
   "author": "Lim Yuan Qing",
   "repository": "yuanqing/sketch-clean-document",
   "dependencies": {
+    "natural-compare-lite": "^1.4.0",
     "sketch-sort-layer-list": "*"
   },
   "devDependencies": {
@@ -38,23 +39,27 @@
         "label": "Clean Layers"
       },
       {
-        "handler": "clean-styles-and-symbols/clean-styles-and-symbols",
-        "label": "Clean Styles and Symbols"
+        "handler": "clean-symbols/clean-symbols",
+        "label": "Clean Symbols"
+      },
+      {
+        "handler": "clean-styles/clean-styles",
+        "label": "Clean Styles"
+      },
+      {
+        "handler": "clean-pages/clean-pages",
+        "label": "Clean Pages"
       },
       "-",
       {
         "Settings": [
           {
-            "handler": "clean-layers/settings",
-            "label": "Settings for Clean Layers"
-          },
-          {
-            "handler": "clean-styles-and-symbols/settings",
-            "label": "Settings for Clean Styles and Symbols"
+            "handler": "settings/settings",
+            "label": "Settings"
           },
           "-",
           {
-            "handler": "reset-settings",
+            "handler": "settings/reset-settings",
             "label": "Reset Settings"
           }
         ]
@@ -66,9 +71,14 @@
       "cleanLayers.smartSortLayers": true,
       "cleanLayers.unnestNestedGroups": true,
       "cleanLayers.whitelistRegularExpression": "",
-      "cleanStylesAndSymbols.deleteUnusedLayerStyles": true,
-      "cleanStylesAndSymbols.deleteUnusedSymbols": true,
-      "cleanStylesAndSymbols.deleteUnusedTextStyles": true
+      "cleanPages.deleteEmptyPages": true,
+      "cleanPages.sortPages": true,
+      "cleanStyles.deleteUnusedLayerStyles": true,
+      "cleanStyles.deleteUnusedTextStyles": true,
+      "cleanSymbols.deleteUnusedSymbols": true,
+      "cleanSymbols.organiseSymbols": true,
+      "cleanSymbols.groupDefinition": "2nd",
+      "cleanSymbols.space": 100
     }
   }
 }
