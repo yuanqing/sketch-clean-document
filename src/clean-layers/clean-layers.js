@@ -13,7 +13,7 @@ import smartRenameLayer from './smart-rename-layer'
 import smartSortLayer from './smart-sort-layer'
 
 export default function cleanLayers ({ isCleanDocument }) {
-  const settings = getSettings({ keyPrefix: 'cleanLayers' })
+  const settings = getSettings().cleanLayers
   if (!checkSettings(settings)) {
     return
   }

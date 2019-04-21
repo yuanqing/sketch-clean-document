@@ -11,7 +11,7 @@ import {
 } from './delete-unused-styles'
 
 export default function cleanStyles ({ isCleanDocument }) {
-  const settings = getSettings({ keyPrefix: 'cleanStyles' })
+  const settings = getSettings().cleanStyles
   if (!checkSettings(settings)) {
     return
   }

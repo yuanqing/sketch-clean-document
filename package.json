@@ -66,19 +66,27 @@
       }
     ],
     "defaultSettings": {
-      "cleanLayers.deleteHiddenLayers": true,
-      "cleanLayers.smartRenameLayers": true,
-      "cleanLayers.smartSortLayers": true,
-      "cleanLayers.unnestNestedGroups": true,
-      "cleanLayers.whitelistRegularExpression": "",
-      "cleanPages.deleteEmptyPages": true,
-      "cleanPages.sortPages": true,
-      "cleanStyles.deleteUnusedLayerStyles": true,
-      "cleanStyles.deleteUnusedTextStyles": true,
-      "cleanSymbols.deleteUnusedSymbols": true,
-      "cleanSymbols.organiseSymbols": true,
-      "cleanSymbols.groupDefinition": "2nd",
-      "cleanSymbols.space": 100
+      "cleanLayers": {
+        "deleteHiddenLayers": true,
+        "smartRenameLayers": true,
+        "smartSortLayers": true,
+        "unnestNestedGroups": true,
+        "whitelistRegularExpression": ""
+      },
+      "cleanPages": {
+        "deleteEmptyPages": true,
+        "sortPages": true
+      },
+      "cleanStyles": {
+        "deleteUnusedLayerStyles": true,
+        "deleteUnusedTextStyles": true
+      },
+      "cleanSymbols": {
+        "deleteUnusedSymbols": true,
+        "organiseSymbols": true,
+        "groupDefinition": "2nd",
+        "space": 100
+      }
     }
   }
 }

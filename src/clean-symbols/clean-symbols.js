@@ -9,7 +9,7 @@ import deleteUnusedSymbols from './delete-unused-symbols'
 import organiseSymbols from './organise-symbols'
 
 export default function cleanSymbols ({ isCleanDocument }) {
-  const settings = getSettings({ keyPrefix: 'cleanSymbols' })
+  const settings = getSettings().cleanSymbols
   if (!checkSettings(settings)) {
     return
   }

@@ -11,7 +11,7 @@ import {
 import checkSettings from '../settings/check-settings'
 
 export default function cleanPages ({ isCleanDocument }) {
-  const settings = getSettings({ keyPrefix: 'cleanPages' })
+  const settings = getSettings().cleanPages
   if (!checkSettings(settings)) {
     return
   }
