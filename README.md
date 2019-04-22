@@ -6,10 +6,10 @@
 
 ### Clean Layers
 
-- Delete hidden layers
+- Deletes hidden layers
 - Smart rename layers
-- Unnest nested groups
-- Specify a whitelist regular expression to skip processing of certain layers
+- Unnests nested groups
+- Skips processing of certain layers based on a whitelist regular expression
 - Operates on layers in the selection, or on layers on the current page if the selection is empty
 
 ### Clean Symbols
