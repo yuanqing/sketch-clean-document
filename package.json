@@ -11,8 +11,8 @@
   "author": "Lim Yuan Qing",
   "repository": "yuanqing/sketch-clean-document",
   "dependencies": {
-    "natural-compare-lite": "^1.4.0",
-    "sketch-sort-layer-list": "*"
+    "natural-compare-lite": "1.4.0",
+    "sketch-sort-layer-list": "0.3.0"
   },
   "devDependencies": {
     "sketch-plugin-helper": "*"
