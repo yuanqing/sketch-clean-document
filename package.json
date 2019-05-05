@@ -11,11 +11,8 @@
   "author": "Lim Yuan Qing",
   "repository": "yuanqing/sketch-clean-document",
   "dependencies": {
-    "natural-compare-lite": "1.4.0",
-    "sketch-sort-layer-list": "0.3.0"
-  },
-  "devDependencies": {
-    "sketch-plugin-helper": "*"
+    "natural-compare-lite": "^1.4.0",
+    "sketch-sort-layer-list": "*"
   },
   "scripts": {
     "build": "sph build",
@@ -25,6 +22,9 @@
     "unlink": "sph symlink --delete",
     "version": "sph version",
     "watch": "sph build --watch"
+  },
+  "devDependencies": {
+    "sketch-plugin-helper": "*"
   },
   "sketch-plugin-helper": {
     "name": "Clean Document",
