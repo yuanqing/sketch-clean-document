@@ -10,6 +10,9 @@
   "license": "MIT",
   "author": "Lim Yuan Qing",
   "repository": "yuanqing/sketch-clean-document",
+  "files": [
+    "src"
+  ],
   "dependencies": {
     "natural-compare-lite": "^1.4.0",
     "sketch-sort-layer-list": "*"
