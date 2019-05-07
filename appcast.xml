@@ -6,6 +6,11 @@
     <description>A Sketch plugin to automagically organise and clean up your Sketch document</description>
     <language>en</language>
     <item>
+      <title>v0.0.3</title>
+      <description>0.0.3</description>
+      <enclosure url="https://github.com/yuanqing/sketch-clean-document/archive/v0.0.3.zip" sparkle:version="0.0.3"/>
+    </item>
+    <item>
       <title>v0.0.2</title>
       <description>0.0.2</description>
       <enclosure url="https://github.com/yuanqing/sketch-clean-document/archive/v0.0.2.zip" sparkle:version="0.0.2"/>
