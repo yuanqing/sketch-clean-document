@@ -2,7 +2,7 @@
 
 > A Sketch plugin to automagically organise and clean up your Sketch document
 
-![Clean layers](media/clean-layers.gif)
+![Clean Layers](media/clean-layers.gif)
 
 ## Commands
 
