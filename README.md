@@ -2,14 +2,16 @@
 
 > A Sketch plugin to automagically organise and clean up your Sketch document
 
-## Usage
+![Clean layers](media/clean-layers.gif)
+
+## Commands
 
 ### Clean Layers
 
 - Deletes hidden layers
 - Smart rename layers
 - Unnests nested groups
-- Skips processing of certain layers based on a whitelist regular expression
+- Skips processing of certain layers that match a whitelist regular expression
 - Operates on layers in the selection, or on layers on the current page if the selection is empty
 
 ### Clean Symbols
@@ -28,7 +30,7 @@
 
 ### Clean Document
 
-Executes the above four commands on all layers (on all pages), symbols, text styles, layer styles and pages in the current document
+- Executes the above four commands on all layers, all symbols, all text styles and layer styles, and all pages in the current document
 
 ## Installation
 
