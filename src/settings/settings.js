@@ -22,6 +22,11 @@ const settingsConfig = {
     },
     {
       type: CHECK_BOX,
+      key: 'cleanLayers.roundToNearestPixel',
+      label: 'Round to nearest pixel'
+    },
+    {
+      type: CHECK_BOX,
       key: 'cleanLayers.smartRenameLayers',
       label: 'Smart rename layers'
     },

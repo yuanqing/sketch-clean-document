@@ -9,6 +9,7 @@ import {
 import checkSettings from '../settings/check-settings'
 import deleteHiddenLayer from './delete-hidden-layer'
 import unnestNestedGroup from './unnest-nested-group'
+import roundToNearestPixel from './round-to-nearest-pixel'
 import smartRenameLayer from './smart-rename-layer'
 import smartSortLayer from './smart-sort-layer'
 
@@ -32,6 +33,9 @@ export default function cleanLayers ({ isCleanDocument }) {
     }
     if (settings.deleteHiddenLayers && deleteHiddenLayer(layer)) {
       return
+    }
+    if (settings.roundToNearestPixel) {
+      roundToNearestPixel(layer)
     }
     if (settings.smartRenameLayers) {
       smartRenameLayer(layer)

@@ -9,10 +9,11 @@
 ### Clean Layers
 
 - Deletes hidden layers
-- Smart rename layers
 - Unnests nested groups
-- Skips processing of certain layers that match a whitelist regular expression
+- Rounds shapes to the nearest pixels
+- Smart rename layers
 - Operates on layers in the selection, or on layers on the current page if the selection is empty
+- Skips processing of certain layers that match a whitelist regular expression
 
 ### Clean Symbols
 

@@ -71,6 +71,7 @@
     "defaultSettings": {
       "cleanLayers": {
         "deleteHiddenLayers": true,
+        "roundToNearestPixel": true,
         "smartRenameLayers": true,
         "smartSortLayers": true,
         "unnestNestedGroups": true,
