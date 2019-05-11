@@ -10,7 +10,7 @@
 
 - Deletes hidden layers
 - Unnests nested groups
-- Rounds shapes to the nearest pixels
+- Rounds layer edges to the nearest pixel
 - Smart rename layers
 - Operates on layers in the selection, or on layers on the current page if the selection is empty
 - Skips processing of certain layers that match a whitelist regular expression
