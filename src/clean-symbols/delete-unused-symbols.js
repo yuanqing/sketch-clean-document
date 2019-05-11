@@ -1,12 +1,29 @@
 import { getLayersOnAllPages, iterateNestedLayers } from 'sketch-plugin-helper'
 
 export default function deleteUnusedSymbols () {
-  let count = 0
+  const symbolsToDelete = {}
   iterateNestedLayers(getLayersOnAllPages(), function (layer) {
-    if (layer.type === 'SymbolMaster' && layer.getAllInstances().length === 0) {
-      layer.remove()
-      count++
+    if (layer.type === 'SymbolMaster' || layer.type === 'SymbolInstance') {
+      if (
+        layer.type === 'SymbolMaster' &&
+        layer.getAllInstances().length === 0 &&
+        symbolsToDelete[layer.symbolId] !== null
+      ) {
+        symbolsToDelete[layer.symbolId] = layer
+      }
+      layer.overrides.forEach(function (override) {
+        if (override.symbolOverride) {
+          symbolsToDelete[override.value] = null
+        }
+      })
     }
   })
+  let count = 0
+  Object.values(symbolsToDelete)
+    .filter(Boolean)
+    .forEach(function (symbol) {
+      symbol.remove()
+      count++
+    })
   return count
 }
