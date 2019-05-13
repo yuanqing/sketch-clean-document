@@ -2,7 +2,7 @@ import {
   getLayersOnAllPages,
   getSelectedLayersOrLayersOnCurrentPage,
   getSettings,
-  iterateNestedLayers,
+  iterateChildLayers,
   showSuccessMessage
 } from 'sketch-plugin-helper'
 
@@ -24,7 +24,7 @@ export default function cleanLayers ({ isCleanDocument }) {
   const regularExpression = settings.whitelistRegularExpression
   const whitelistRegularExpression =
     regularExpression === '' ? null : new RegExp(regularExpression)
-  iterateNestedLayers(layers, function (layer) {
+  iterateChildLayers(layers, function (layer) {
     if (
       whitelistRegularExpression &&
       whitelistRegularExpression.test(layer.name)

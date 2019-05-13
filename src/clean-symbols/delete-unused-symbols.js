@@ -1,8 +1,8 @@
-import { getLayersOnAllPages, iterateNestedLayers } from 'sketch-plugin-helper'
+import { getLayersOnAllPages, iterateChildLayers } from 'sketch-plugin-helper'
 
 export default function deleteUnusedSymbols () {
   const symbolsToDelete = {}
-  iterateNestedLayers(getLayersOnAllPages(), function (layer) {
+  iterateChildLayers(getLayersOnAllPages(), function (layer) {
     if (layer.type === 'SymbolMaster' || layer.type === 'SymbolInstance') {
       if (
         layer.type === 'SymbolMaster' &&
