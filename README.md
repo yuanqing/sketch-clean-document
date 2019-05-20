@@ -1,4 +1,4 @@
-# Clean Document
+# Clean Document [![npm Version](https://badgen.net/npm/v/sketch-clean-document)](https://www.npmjs.org/package/sketch-clean-document)
 
 > A Sketch plugin to automagically organise and clean up your Sketch document
 
