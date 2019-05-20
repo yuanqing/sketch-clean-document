@@ -1,6 +1,7 @@
 import {
   openSettingsDialog,
   saveSettings,
+  showSuccessMessage,
   CHECK_BOX,
   DROP_DOWN,
   NUMERIC_TEXT_BOX,
@@ -9,7 +10,7 @@ import {
 
 const settingsConfig = {
   title: 'Settings for Clean Document',
-  inputs: [
+  formFields: [
     {
       type: CHECK_BOX,
       key: 'cleanLayers.deleteHiddenLayers',
@@ -90,6 +91,7 @@ const settingsConfig = {
 export default function settings () {
   const settings = openSettingsDialog(settingsConfig)
   if (settings) {
-    saveSettings(settings, { successMessage: 'Settings saved' })
+    saveSettings(settings)
+    showSuccessMessage('Saved settings')
   }
 }

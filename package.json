@@ -18,13 +18,16 @@
     "sketch-sort-layer-list": "*"
   },
   "scripts": {
-    "build": "sph build",
-    "fix": "sph lint --fix",
-    "lint": "sph lint",
-    "symlink": "sph symlink",
-    "unlink": "sph symlink --delete",
-    "version": "sph version",
-    "watch": "sph build --watch"
+    "build": "sketch build",
+    "fix": "sketch lint --fix",
+    "handler": "sketch handler",
+    "lint": "sketch lint",
+    "script": "sketch script",
+    "symlink": "sketch symlink",
+    "test": "sketch test",
+    "unlink": "sketch symlink --delete",
+    "version": "sketch version",
+    "watch": "sketch build --watch"
   },
   "devDependencies": {
     "sketch-plugin-helper": "*"
@@ -34,36 +37,36 @@
     "menu": [
       {
         "handler": "clean-document",
-        "label": "Clean Document"
+        "name": "Clean Document"
       },
       "-",
       {
         "handler": "clean-layers/clean-layers",
-        "label": "Clean Layers"
+        "name": "Clean Layers"
       },
       {
         "handler": "clean-symbols/clean-symbols",
-        "label": "Clean Symbols"
+        "name": "Clean Symbols"
       },
       {
         "handler": "clean-styles/clean-styles",
-        "label": "Clean Styles"
+        "name": "Clean Styles"
       },
       {
         "handler": "clean-pages/clean-pages",
-        "label": "Clean Pages"
+        "name": "Clean Pages"
       },
       "-",
       {
         "Settings": [
           {
             "handler": "settings/settings",
-            "label": "Settings"
+            "name": "Settings"
           },
           "-",
           {
             "handler": "settings/reset-settings",
-            "label": "Reset Settings"
+            "name": "Reset Settings"
           }
         ]
       }
