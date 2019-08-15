@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Clean Document</title>
-    <link>https://raw.githubusercontent.com/yuanqing/sketch-clean-document/master/appcast.xml</link>
+    <link>https://raw.githubusercontent.com/yuanqing/sketch-plugins/master/packages/sketch-clean-document/.appcast.xml</link>
     <description>A Sketch plugin to automagically organise and clean up your Sketch document</description>
     <language>en</language>
     <item>
